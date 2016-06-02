@@ -1,0 +1,1377 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>White Bears official site</title>
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=320,initial-scale=1">
+    <script src="{% static "js/modernizr.js" %}"></script>
+    <script src="{% static "js/svg4everybody.js" %}"></script>
+    <link rel="stylesheet" href="{% static "css/style.min.css" %}">
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script>window.jQuery || document.write('<script src="{% static "js/jquery.min.js" %}"><\/script>')</script>
+    <script src="{% static "js/stmenu.js" %}"></script>
+    <script type="text/javascript">
+        var league = "khl";
+        var newsSSBlockId = '5_6';
+    </script>
+    <script src="{% static "js/async_af.js" %}"></script>
+</head>
+<body id="page-top" class="p-home">
+<div id="TicketShopContainer" style="display: none;"></div>
+<div id="fb-root"></div>
+<div class="content-wrapper">
+    <div class="home-top">
+        <header class="header-nav header-nav_home">
+            <div class="wrp">
+                <div class="header-nav__logo"><img class="header-nav__img" width="136" src=""
+                                                   alt="SKA logo"></div>
+                <div class="header-nav__cup"><img class="header-nav__cup__img" src=""
+                                                  alt="Gagarin 2015 cup"></div>
+                <div class="header-nav__main"><h1 class="header-nav__title">White Bears hockey club</h1>
+                    <nav class="top-nav top-nav_home">
+                        <ul class="top-nav__list">
+                            <li class="top-nav__item  news_index"><a href="/news/" class="top-nav__link">Новости</a>
+                            </li>
+                            &#x20;
+                            <li class="top-nav__item  championship_index"><a href="#"
+                                                                             class="top-nav__link">Чемпионат</a></li>
+                            &#x20;
+                            <li class="top-nav__item  team_index"><a href="/team/" class="top-nav__link">Команда</a>
+                            </li>
+                            &#x20;
+                            <li class="top-nav__item  club_history"><a href="#"
+                                                                       class="top-nav__link">Клуб</a></li>
+                            &#x20;
+                            <li class="top-nav__item  "><a
+                                    href="https://tickets.ska.ru/?utm_source=ska&amp;utm_medium=menu&amp;utm_campaign=menu"
+                                    target="_blank" class="top-nav__link">Билеты</a></li>
+                            &#x20;
+                            <li class="top-nav__item  media_index"><a href="/media/" class="top-nav__link">Медиа</a>
+                            </li>
+                            &#x20;
+                            <li class="top-nav__item  fansector_index"><a href="#" class="top-nav__link">Болельщики</a>
+                            </li>
+                            &#x20;
+                            <li class="top-nav__item  "><a
+                                    href="https://shop.ska.ru/?utm_source=ska&amp;utm_medium=menu&amp;utm_campaign=menu"
+                                    target="_blank" class="top-nav__link">Магазин</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="wrp main-slider">
+            <div class="wrp-out home-top__wrapper">
+                <div class="home-rotator js-slider" data-timeout="4000">
+                    <ul class="home-rotator__list">
+                        <li class="home-rotator__slide js-slide m-active">
+                            <a class="home-rotator__link" href="{% url 'news:news' %}">
+                            <img
+                                class="home-rotator__img"
+                                src="/media/news/ab220115013.jpg"
+                                alt="Алексею Поникаровскому – 36!">
+                            </a>
+                            <span class="home-rotator__text">
+                                <a class="home-rotator__link"
+                                href="{% url 'news:news' %}">
+                                    <span class="home-rotator__text-general">
+                                         Алексею Поникаровскому – 36!
+                                    </span>
+                                    <span class="home-rotator__text-mobile">
+                                        Алексею Поникаровскому – 36!
+                                    </span>
+                                </a>
+                            </span>
+                        </li>
+                        <li class="home-rotator__slide js-slide "><img class="home-rotator__img"
+                                                                       src="#"
+                                                                       alt="Билеты на чемпионат мира"
+{#                                                                       onclick="function showWorldCup(){$.fancybox({ &#039;href&#039; : &#039;#TicketShopContainer&#039; });}showWorldCup();"#}
+                                                                       style="cursor: pointer;"><span
+                                class="home-rotator__link home-rotator__text"><span class="home-rotator__text-general">
+                                         Билеты на чемпионат мира
+                                    </span><span class="home-rotator__text-mobile">
+                                        Билеты на чемпионат мира
+                                    </span></span></li>
+                        <li class="home-rotator__slide js-slide "><a class="home-rotator__link"
+                                                                     href="http://ska.ru/#video/979"><img
+                                class="home-rotator__img"
+                                src="/media/news/jlrYm7UYaGI.jpg"
+                                alt="Предматчевое шоу СКА для третьего раунда плей-офф"></a><span
+                                class="home-rotator__text"><a class="home-rotator__link"
+                                                              href="http://ska.ru/#video/979"><span
+                                class="home-rotator__text-general">
+                                         Предматчевое шоу СКА для третьего раунда плей-офф
+                                    </span><span class="home-rotator__text-mobile">
+                                        Предматчевое шоу СКА для третьего раунда плей-офф
+                                    </span></a></span></li>
+                        <li class="home-rotator__slide js-slide "><a class="home-rotator__link"
+                                                                     href="http://ska.ru/media/album/view/655"><img
+                                class="home-rotator__img"
+                                src="/media/news/jlrYm7UYaGI.jpg"
+                                alt="Фото: Сборная России обыграла Норвегию"></a><span class="home-rotator__text"><a
+                                class="home-rotator__link" href="http://ska.ru/media/album/view/655"><span
+                                class="home-rotator__text-general">
+                                         Фото: Сборная России обыграла Норвегию
+                                    </span><span class="home-rotator__text-mobile">
+                                        Фото: Сборная России обыграла Норвегию
+                                    </span></a></span></li>
+                    </ul>
+                    <ul class="home-rotator__nav">
+                        <li class="home-rotator__nav-item js-nav m-active">1</li>
+                        <li class="home-rotator__nav-item js-nav ">2</li>
+                        <li class="home-rotator__nav-item js-nav ">3</li>
+                        <li class="home-rotator__nav-item js-nav ">4</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrp-out home-top__wrapper">
+                <div class="wrp-banner"><!--AdFox START--><!--opaFg45Rtnb8--><!--Площадка: ska.ru / * / *-->
+                    <!--Тип баннера: 1200х100--><!--Расположение: <верх страницы>-->
+                    <script type="text/javascript"><!--
+                    if (typeof(pr) == 'undefined') {
+                        var pr = Math.floor(Math.random() * 4294967295) + 1;
+                    }
+                    if (typeof(document.referrer) != 'undefined') {
+                        if (typeof(afReferrer) == 'undefined') {
+                            afReferrer = escape(document.referrer);
+                        }
+                    } else {
+                        afReferrer = '';
+                    }
+                    var addate = new Date();
+                    document.write('<scr' + 'ipt type="text/javascript" src="//ads.adfox.ru/241409/prepareCode?pp=g&amp;ps=ccss&amp;p2=ffjd&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr + '&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '"><\/scr' + 'ipt>');
+                    // --></script><!--AdFox END--></div>
+            </div>
+        </div>
+    </div>
+    <div class="home-news">
+        <div class="home-news__wrp">
+            <div class="news-page__wrp clearfix">
+                <div class="home-news__table">
+                    <section class="home-news__cell m-main"><h2 class="news-page__title news-page__title_home"><a
+                            href="/news/">НОВОСТИ КЛУБА</a></h2>
+                        <div class="news-page__column-inner">
+                            <div class="news-page__item">
+                                <div class="news-item">
+                                    <div class="news-item__date-type-container">
+                                        <div class="news-item__date">9 апр/2016</div>
+                                        <a href="/news/season/2015-2016/sobytia"
+                                           class="news-item__type category_clickable" style="background-color:#00c092">События</a>
+                                    </div>
+                                    <a href="/news/view/alieksieiu-ponikarovskomu-36"><span
+                                            class="news-item__image"><img
+                                            src="/media/cache/news_preview/media/images/news/photo/5708b0ae405395_84529989.jpeg"
+                                            alt="Алексею Поникаровскому – 36!"></span></a><a
+                                        href="/news/view/alieksieiu-ponikarovskomu-36" class="news-item__link"><span
+                                        class="news-item__title">Алексею Поникаровскому – 36!</span></a>
+                                    <div class="tag__container"><a href="/news/tag/Алексей Поникаровский/all"
+                                                                   class="tag__link">Алексей Поникаровский</a><a
+                                            href="/news/tag/Поздравления/all" class="tag__link">Поздравления</a></div>
+                                </div>
+                            </div>
+                            <div class="news-page__item">
+                                <div class="news-item">
+                                    <div class="news-item__date-type-container">
+                                        <div class="news-item__date">8 апр/2016</div>
+                                        <a href="/news/season/2015-2016/matchi"
+                                           class="news-item__type category_clickable" style="background-color:#fa2831">Матчи</a>
+                                    </div>
+                                    <a href="/news/view/ievrochielliendzh-rossiia-norvieghiia-2-1-ot"><span
+                                            class="news-item__image"><img
+                                            src="/media/cache/news_preview/media/images/news/photo/570806bfe4ab32_49570002.jpeg"
+                                            alt="Еврочеллендж. Россия – Норвегия – 2:1 ОТ"></span></a><a
+                                        href="/news/view/ievrochielliendzh-rossiia-norvieghiia-2-1-ot"
+                                        class="news-item__link"><span class="news-item__title">Еврочеллендж. Россия – Норвегия – 2:1 ОТ</span></a>
+                                    <div class="tag__container"><a href="/news/tag/Сборная России/all"
+                                                                   class="tag__link">Сборная России</a><a
+                                            href="/news/tag/Товарищеский матч/all" class="tag__link">Товарищеский
+                                        матч</a></div>
+                                </div>
+                            </div>
+                            <div class="news-page__item">
+                                <div class="news-item">
+                                    <div class="news-item__date-type-container">
+                                        <div class="news-item__date">8 апр/2016</div>
+                                        <a href="/news/season/2015-2016/sobytia"
+                                           class="news-item__type category_clickable" style="background-color:#00c092">События</a>
+                                    </div>
+                                    <a href="/news/view/ighroki-ska-prisoiedinilis-k-natsional-noi-sbornoi"><span
+                                            class="news-item__image"><img
+                                            src="/media/cache/news_preview/media/images/news/photo/57076740a4c6b5_25119355.jpeg"
+                                            alt="Игроки СКА присоединились к национальной сборной"></span></a><a
+                                        href="/news/view/ighroki-ska-prisoiedinilis-k-natsional-noi-sbornoi"
+                                        class="news-item__link"><span class="news-item__title">Игроки СКА присоединились к национальной сборной</span></a>
+                                    <div class="tag__container"><a href="/news/tag/Сборная России/all"
+                                                                   class="tag__link">Сборная России</a></div>
+                                </div>
+                            </div>
+                            <div class="news-page__item-separator"></div>
+                            <div class="news-page__item">
+                                <div class="news-item">
+                                    <div class="news-item__date-type-container">
+                                        <div class="news-item__date">7 апр/2016</div>
+                                        <a href="/news/season/2015-2016/sobytia"
+                                           class="news-item__type category_clickable" style="background-color:#00c092">События</a>
+                                    </div>
+                                    <a href="/news/view/romanu-rotienbierghu-35"><span class="news-item__image"><img
+                                            src="/media/cache/news_preview/media/images/news/photo/57060b40e4bcc0_46358805.jpeg"
+                                            alt="Роману Ротенбергу – 35!"></span></a><a
+                                        href="/news/view/romanu-rotienbierghu-35" class="news-item__link"><span
+                                        class="news-item__title">Роману Ротенбергу – 35!</span></a>
+                                    <div class="tag__container"><a href="/news/tag/Роман Ротенберг/all"
+                                                                   class="tag__link">Роман Ротенберг</a><a
+                                            href="/news/tag/Поздравления/all" class="tag__link">Поздравления</a></div>
+                                </div>
+                            </div>
+                            <div class="news-page__item">
+                                <div class="news-item">
+                                    <div class="news-item__date-type-container">
+                                        <div class="news-item__date">6 апр/2016</div>
+                                        <a href="/news/season/2015-2016/sobytia"
+                                           class="news-item__type category_clickable" style="background-color:#00c092">События</a>
+                                    </div>
+                                    <a href="/news/view/biliety-na-chiempionat-mira-v-maghazinakh-hockey-club"><span
+                                            class="news-item__image"><img
+                                            src="/media/cache/news_preview/media/images/news/photo/5704e1c416dfc5_26686499.jpeg"
+                                            alt="Билеты на чемпионат мира – в магазинах Hockey Club"></span></a><a
+                                        href="/news/view/biliety-na-chiempionat-mira-v-maghazinakh-hockey-club"
+                                        class="news-item__link"><span class="news-item__title">Билеты на чемпионат мира – в магазинах Hockey Club</span></a>
+                                    <div class="tag__container"><a href="/news/tag/Чемпионат мира/all"
+                                                                   class="tag__link">Чемпионат мира</a><a
+                                            href="/news/tag/Билеты и абонементы/all" class="tag__link">Билеты и
+                                        абонементы</a><a href="/news/tag/Болельщики/all"
+                                                         class="tag__link">Болельщики</a></div>
+                                </div>
+                            </div>
+                            <div class="news-page__item">
+                                <div class="news-item">
+                                    <div class="news-item__date-type-container">
+                                        <div class="news-item__date">6 апр/2016</div>
+                                        <a href="/news/season/2015-2016/sobytia"
+                                           class="news-item__type category_clickable" style="background-color:#00c092">События</a>
+                                    </div>
+                                    <a href="/news/view/koskinien-i-koskiranta-vyzvany-v-sbornuiu"><span
+                                            class="news-item__image"><img
+                                            src="/media/cache/news_preview/media/images/news/photo/5704cab7172b44_67248441.jpeg"
+                                            alt="Коскинен и Коскиранта вызваны в сборную"></span></a><a
+                                        href="/news/view/koskinien-i-koskiranta-vyzvany-v-sbornuiu"
+                                        class="news-item__link"><span class="news-item__title">Коскинен и Коскиранта вызваны в сборную</span></a>
+                                    <div class="tag__container"><a href="/news/tag/Вызов в сборную/all"
+                                                                   class="tag__link">Вызов в сборную</a><a
+                                            href="/news/tag/Сборная Финляндии/all" class="tag__link">Сборная
+                                        Финляндии</a><a href="/news/tag/Микко Коскинен/all" class="tag__link">Микко
+                                        Коскинен</a><span class="show-more__container_more-tag"><svg viewBox="0 0 21 6"
+                                                                                                     class="icon-dotdotdot">
+                                        <use xlink:href="/frontend/img/svg/icons.svg#icon_dotdotdot"/>
+                                    </svg></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="home-news__cell m-aside"><h2 class="news-page__title"><a href="/news/">НОВОСТИ
+                        ХОККЕЯ</a></h2>
+                        <div class="news-page__aside-inner news-page__aside-news">
+                            <div class="news-page__aside-item news-item">
+                                <div class="news-item__date">9 апр/2016</div>
+                                <a class="news-item__link"
+                                   href="/news/view/amur-povtorno-obyghral-sbornuiu-iaponii"><span
+                                        class="news-item__title">«Амур» повторно обыграл сборную Японии</span></a>
+                                <div class="tag__container"></div>
+                            </div>
+                            <div class="news-page__aside-item news-item">
+                                <div class="news-item__date">9 апр/2016</div>
+                                <a class="news-item__link"
+                                   href="/news/view/boliel-shchiki-iughry-priznali-bortnikova-luchshim-ighrokom-v-siezonie"><span
+                                        class="news-item__title">Болельщики «Югры» признали Бортникова лучшим игроком в сезоне</span></a>
+                                <div class="tag__container"></div>
+                            </div>
+                            <div class="news-page__aside-item news-item">
+                                <div class="news-item__date">9 апр/2016</div>
+                                <a class="news-item__link"
+                                   href="/news/view/faziel-ostalsia-iedinstviennym-kandidatom-na-post-priezidienta-iihf"><span
+                                        class="news-item__title">Фазель остался единственным кандидатом на пост президента IIHF</span></a>
+                                <div class="tag__container"></div>
+                            </div>
+                            <div class="news-page__aside-item news-item">
+                                <div class="wrp-banner"><!--AdFox START--><!--opaFg45Rtnb8-->
+                                    <!--Площадка: ska.ru / * / *--><!--Тип баннера: 220х300 новости-->
+                                    <!--Расположение: <середина страницы>-->
+                                    <script type="text/javascript"><!--
+                                    if (typeof(pr) == 'undefined') {
+                                        var pr = Math.floor(Math.random() * 4294967295) + 1;
+                                    }
+                                    if (typeof(document.referrer) != 'undefined') {
+                                        if (typeof(afReferrer) == 'undefined') {
+                                            afReferrer = escape(document.referrer);
+                                        }
+                                    } else {
+                                        afReferrer = '';
+                                    }
+                                    var addate = new Date();
+                                    document.write('<scr' + 'ipt type="text/javascript" src="//ads.adfox.ru/241409/prepareCode?pp=h&amp;ps=ccss&amp;p2=ffjr&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr + '&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '"><\/scr' + 'ipt>');
+                                    // --></script><!--AdFox END--></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="home-media home-media_default">
+        <div class="wrp"><h2 class="home-media__title"><a href="/media/" class="home-media__link">Медиа</a></h2>
+            <div class="home-media__main">
+                <div class="media-item media-item_default media-item_photo js-media-route">
+                    <div class="media-item__img-holder"><a href="/media/album/view/655"
+                                                           class="media-item__img-link"></a><img
+                            class="media-item__img media-item__img_photo"
+                            src="/media/cache/album_preview/media/images/uploads/57080b438ae5a6_62802182.jpeg"
+                            alt="Еврочеллендж. Россия – Норвегия – 2:1 ОТ (08.04.2016)"></div>
+                    <div class="media-item__info">
+                        <div class="media-item__header"><span class="media-item__date">8 апр/2016</span><a
+                                href="/media/album#matchi" class="news-item__type category_clickable"
+                                style="background-color:#fa2831;">Матчи</a></div>
+                        <a href="/media/album/view/655" class="media-item__text">Еврочеллендж. Россия – Норвегия – 2:1
+                            ОТ (08.04.2016)</a></div>
+                </div>
+                <div class="media-item media-item_default media-item_photo js-media-route">
+                    <div class="media-item__img-holder"><a href="/media/album/view/654"
+                                                           class="media-item__img-link"></a><img
+                            class="media-item__img media-item__img_photo"
+                            src="/media/cache/album_preview/media/images/uploads/56fe2d55cf29a0_36072105.jpeg"
+                            alt="Матч закрытия сезона в ч/б (30.03.2016)"></div>
+                    <div class="media-item__info">
+                        <div class="media-item__header"><span class="media-item__date">1 апр/2016</span><a
+                                href="/media/album#na-arienie" class="news-item__type category_clickable"
+                                style="background-color:#ff9c23;">На арене</a></div>
+                        <a href="/media/album/view/654" class="media-item__text">Матч закрытия сезона в ч/б
+                            (30.03.2016)</a></div>
+                </div>
+                <div class="media-item media-item_default media-item_photo js-media-route">
+                    <div class="media-item__img-holder"><a href="/media/album/view/651"
+                                                           class="media-item__img-link"></a><img
+                            class="media-item__img media-item__img_photo"
+                            src="/media/cache/album_preview/media/images/albums/56fccf48c50730_56831952.jpeg"
+                            alt="Автограф-сессия на матче закрытия сезона (30.03.2016)"></div>
+                    <div class="media-item__info">
+                        <div class="media-item__header"><span class="media-item__date">31 марта/2016</span><a
+                                href="/media/album#na-arienie" class="news-item__type category_clickable"
+                                style="background-color:#ff9c23;">На арене</a></div>
+                        <a href="/media/album/view/651" class="media-item__text">Автограф-сессия на матче закрытия
+                            сезона (30.03.2016)</a></div>
+                </div>
+                <div class="media-item media-item_default media-item_photo js-media-route">
+                    <div class="media-item__img-holder"><a href="#video/979" data-id="979"
+                                                           class="media-item__img-link"></a><img
+                            class="media-item__img media-item__img_video"
+                            src="http://img.youtube.com/vi/OJTV6Eup8sc/mqdefault.jpg" alt="Video">
+                        <div class="media-item__overlay"><span class="media-item__play-holder"><svg
+                                class="media-item__play icon_play">
+                            <use xlink:href="/frontend/img/svg/icons.svg#icon_play"/>
+                        </svg></span></div>
+                    </div>
+                    <div class="media-item__info">
+                        <div class="media-item__header"><span class="media-item__date">7 апр/2016</span><a
+                                href="/media/skatv#2015-2016/promo" class="news-item__type category_clickable"
+                                style="background-color:#008bd7;">Промо</a></div>
+                        <a href="#video/979" class="media-item__text" data-id="979">Предматчевое шоу СКА для третьего
+                            раунда плей-офф</a></div>
+                </div>
+                <div class="media-item media-item_default media-item_photo js-media-route">
+                    <div class="media-item__img-holder"><a href="#video/978" data-id="978"
+                                                           class="media-item__img-link"></a><img
+                            class="media-item__img media-item__img_video"
+                            src="http://img.youtube.com/vi/X77B_hKheJ0/mqdefault.jpg" alt="Video">
+                        <div class="media-item__overlay"><span class="media-item__play-holder"><svg
+                                class="media-item__play icon_play">
+                            <use xlink:href="/frontend/img/svg/icons.svg#icon_play"/>
+                        </svg></span></div>
+                    </div>
+                    <div class="media-item__info">
+                        <div class="media-item__header"><span class="media-item__date">5 апр/2016</span><a
+                                href="/media/skatv#2015-2016/bolelyshiki" class="news-item__type category_clickable"
+                                style="background-color:#6668cb;">Болельщики</a></div>
+                        <a href="#video/978" class="media-item__text" data-id="978">Автограф-сессия СКА на матче
+                            закрытия</a></div>
+                </div>
+                <div class="media-item media-item_default media-item_photo js-media-route">
+                    <div class="media-item__img-holder"><a href="#video/977" data-id="977"
+                                                           class="media-item__img-link"></a><img
+                            class="media-item__img media-item__img_video"
+                            src="/media/cache/album_preview/media/images/videos/56f8d26d34fe24_25125034.jpeg"
+                            alt="Video">
+                        <div class="media-item__overlay"><span class="media-item__play-holder"><svg
+                                class="media-item__play icon_play">
+                            <use xlink:href="/frontend/img/svg/icons.svg#icon_play"/>
+                        </svg></span></div>
+                    </div>
+                    <div class="media-item__info">
+                        <div class="media-item__header"><span class="media-item__date">28 марта/2016</span><a
+                                href="/media/skatv#2015-2016/matchi" class="news-item__type category_clickable"
+                                style="background-color:#fa2831;">Матчи</a></div>
+                        <a href="#video/977" class="media-item__text" data-id="977">СКА – ЦСКА. Матч четвертый.
+                            Live!</a></div>
+                </div>
+            </div>
+            <div class="home-media__aside">
+                <div class="wrp-banner"><!--AdFox START--><!--opaFg45Rtnb8--><!--Площадка: ska.ru / * / *-->
+                    <!--Тип баннера: 260х270 медиа верхний--><!--Расположение: <верх страницы>-->
+                    <script type="text/javascript"><!--
+                    if (typeof(pr) == 'undefined') {
+                        var pr = Math.floor(Math.random() * 4294967295) + 1;
+                    }
+                    if (typeof(document.referrer) != 'undefined') {
+                        if (typeof(afReferrer) == 'undefined') {
+                            afReferrer = escape(document.referrer);
+                        }
+                    } else {
+                        afReferrer = '';
+                    }
+                    var addate = new Date();
+                    document.write('<scr' + 'ipt type="text/javascript" src="//ads.adfox.ru/241409/prepareCode?pp=g&amp;ps=ccss&amp;p2=ffke&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr + '&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '"><\/scr' + 'ipt>');
+                    // --></script><!--AdFox END--></div>
+                <div class="wrp-banner"><!--AdFox START--><!--opaFg45Rtnb8--><!--Площадка: ska.ru / * / *-->
+                    <!--Тип баннера: 260х270 медиа нижний--><!--Расположение: <середина страницы>-->
+                    <script type="text/javascript"><!--
+                    if (typeof(pr) == 'undefined') {
+                        var pr = Math.floor(Math.random() * 4294967295) + 1;
+                    }
+                    if (typeof(document.referrer) != 'undefined') {
+                        if (typeof(afReferrer) == 'undefined') {
+                            afReferrer = escape(document.referrer);
+                        }
+                    } else {
+                        afReferrer = '';
+                    }
+                    var addate = new Date();
+                    document.write('<scr' + 'ipt type="text/javascript" src="//ads.adfox.ru/241409/prepareCode?pp=h&amp;ps=ccss&amp;p2=ffjs&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr + '&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '"><\/scr' + 'ipt>');
+                    // --></script><!--AdFox END--></div>
+            </div>
+        </div>
+    </section>
+    <div class="home-social">
+        <div class="home-social__wrp" id="HomePageSocials">
+            <section class="home-social__quater"><h2 class="home-social__title"><a href="http://sisters.ska.ru/"
+                                                                                   target="_blank"
+                                                                                   class="home-social__link">SKA
+                sisters</a></h2>
+                <div class="home-social__column">
+                    <div class="home-sister">
+                        <div class="home-sister__img-holder"><img src="/frontend/img/tmp/sister3.jpg" alt="SKA sister"
+                                                                  class="home-sister__img"></div>
+                        <blockquote class="home-sister__text"><p class="home-sister__paragraph">«... мы переживаем весь
+                            матч от начала до конца, стараясь внести свой вклад в победу любимого клуба!»</p><cite><a
+                                target="_blank" href="http://sisters.ska.ru/" class="home-sister__name">Перейти на
+                            сайт</a></cite></blockquote>
+                    </div>
+                </div>
+            </section>
+            <section class="home-social__quater"><h2 class="home-social__title"><a href="http://kids.ska.ru/"
+                                                                                   target="_blank"
+                                                                                   class="home-social__link">SKA
+                kids</a></h2>
+                <div class="home-social__column">
+                    <div class="home-sister">
+                        <div class="home-sister__img-holder"><img src="/frontend/img/tmp/ska-kids2.jpg" alt="SKA kids"
+                                                                  class="home-sister__img"></div>
+                        <blockquote class="home-sister__text"><p class="home-sister__paragraph">Путешествие по арене,
+                            тесты на знание хоккея и команды, игры и конкурсы - все для юных болельщиков СКА!</p>
+                            <cite><a href="http://kids.ska.ru/" target="_blank" class="home-sister__name">Перейти на
+                                сайт</a></cite></blockquote>
+                    </div>
+                </div>
+            </section>
+            <section class="home-social__half m-shop"><h2 class="home-social__title"><a href="http://www.shop.ska.ru/"
+                                                                                        class="home-social__link">Магазин</a>
+            </h2>
+                <div class="match-ads match-ads_home"><!--AdFox START--><!--opaFg45Rtnb8-->
+                    <!--Площадка: ska.ru / * / *--><!--Тип баннера: 560х170 верхний-->
+                    <!--Тип баннера: <середина страницы>-->
+                    <script type="text/javascript"><!--
+                    if (typeof(pr) == 'undefined') {
+                        var pr = Math.floor(Math.random() * 4294967295) + 1;
+                    }
+                    if (typeof(document.referrer) != 'undefined') {
+                        if (typeof(afReferrer) == 'undefined') {
+                            afReferrer = escape(document.referrer);
+                        }
+                    } else {
+                        afReferrer = '';
+                    }
+                    var addate = new Date();
+                    document.write('<scr' + 'ipt type="text/javascript" src="//ads.adfox.ru/241409/prepareCode?pp=h&amp;ps=cdly&amp;p2=ffkh&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr + '&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '"><\/scr' + 'ipt>');
+                    // --></script><!--AdFox END--></div>
+                <div class="match-ads match-ads_home"><!--AdFox START--><!--opaFg45Rtnb8-->
+                    <!--Площадка: ska.ru / * / *--><!--Тип баннера: 560х170 нижний-->
+                    <!--Тип баннера: <середина страницы>-->
+                    <script type="text/javascript"><!--
+                    if (typeof(pr) == 'undefined') {
+                        var pr = Math.floor(Math.random() * 4294967295) + 1;
+                    }
+                    if (typeof(document.referrer) != 'undefined') {
+                        if (typeof(afReferrer) == 'undefined') {
+                            afReferrer = escape(document.referrer);
+                        }
+                    } else {
+                        afReferrer = '';
+                    }
+                    var addate = new Date();
+                    document.write('<scr' + 'ipt type="text/javascript" src="//ads.adfox.ru/241409/prepareCode?pp=h&amp;ps=cdly&amp;p2=ffkg&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr + '&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '"><\/scr' + 'ipt>');
+                    // --></script><!--AdFox END--></div>
+            </section>
+            <div class="home-social__column home-social__column_mini-social"><h2 class="home-social__title">Подпишись на
+                СКА</h2>
+                <div class="mini-social__item mini-social__item_vk">
+                    <div id="vk_groups_small"></div>
+                </div>
+                <div class="mini-social__item mini-social__item_fb">
+                    <div class="fb-like-box" data-href="https://www.facebook.com/hcSKA" data-width="200"
+                         data-height="100" data-colorscheme="light" data-show-faces="true" data-header="true"
+                         data-stream="false" data-show-border="true"></div>
+                </div>
+                <div class="mini-social__item mini-social__item_youtube">
+                    <div class="g-ytsubscribe" data-channel="hcskatv" data-layout="full" data-count="default"></div>
+                </div>
+                <div class="mini-social__item mini-social__item_instagram"><a target="_blank"
+                                                                              href="http://instagram.com/hcska"><img
+                        src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram badge"></a></div>
+            </div>
+            <span></span>
+            <div class="home-social__half m-youtube-instagram">
+                <div class="home-social__column" id="InstagramFeed" data-url="/media/instagram_random">
+                    <div class="instagram-feed__container instagram-feed__container_micro">
+                        <div class="instagram-feed__item instagram-feed__item_micro instagram-feed__item_linked"><img
+                                src="/frontend/img/instagram.svg" alt="Instagram logo" class="instagram-feed__link-img"><a
+                                class="instagram-feed__link" target="_blank" href="http://instagram.com/hcska"></a>
+                        </div>
+                        <div class="js-image instagram-feed__item instagram-feed__item_micro"><img
+                                class="instagram-feed__image m-active"
+                                src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12959920_1555664324727237_984229459_n.jpg?ig_cache_key=MTIyNDQ2ODE2NTUzOTA3MDY0MQ%3D%3D.2.l"
+                                alt="instagram_image"><img class="instagram-feed__image"
+                                                           src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12959920_1555664324727237_984229459_n.jpg?ig_cache_key=MTIyNDQ2ODE2NTUzOTA3MDY0MQ%3D%3D.2.l"
+                                                           alt="instagram_image"></div>
+                        <div class="js-image instagram-feed__item instagram-feed__item_micro"><img
+                                class="instagram-feed__image m-active"
+                                src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12328364_493833010812017_444658597_n.jpg?ig_cache_key=MTIyNDExMzA0MTI1MTY5Njg1Mg%3D%3D.2.l"
+                                alt="instagram_image"><img class="instagram-feed__image"
+                                                           src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12328364_493833010812017_444658597_n.jpg?ig_cache_key=MTIyNDExMzA0MTI1MTY5Njg1Mg%3D%3D.2.l"
+                                                           alt="instagram_image"></div>
+                        <div class="js-image instagram-feed__item instagram-feed__item_micro"><img
+                                class="instagram-feed__image m-active"
+                                src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12940956_1702919376614571_591853873_n.jpg?ig_cache_key=MTIyMjM2NTIyMjI3MDU5OTU3Mg%3D%3D.2"
+                                alt="instagram_image"><img class="instagram-feed__image"
+                                                           src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12940956_1702919376614571_591853873_n.jpg?ig_cache_key=MTIyMjM2NTIyMjI3MDU5OTU3Mg%3D%3D.2"
+                                                           alt="instagram_image"></div>
+                    </div>
+                </div>
+                <div class="home-social__column home-youtube">
+                    <div class="home-youtube__title">СКА на</div>
+                    <div class="home-youtube__image-holder">
+                        <svg class="home-youtube__image" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" width="126px" height="50px">
+                            <path fill-rule="evenodd"
+                                  d=" M42 41.0003 C42 41.0003 42 38.0003 42 38.0003 C42 38.0003 39.9138 41.0089 37.5557 41.0089 C35.1952 41.0089 34.0146 39.605 34.0146 37.2677 C34.0146 34.9301 34.0146 15.9926 34.0146 15.9926 C34.0146 15.9926 39.0001 16.0005 39.0001 16.0005 C39.0001 16.0005 39.0001 34.9999 39.0001 34.9999 C39.0001 34.9999 38.9397 37.2106 41.0001 37.0002 C41.0001 37.0002 41.9417 36.7432 42 34.9999 C42 34.9999 42 16.0005 42 16.0005 C42 16.0005 46.9858 15.9926 46.9858 15.9926 C46.9858 15.9926 47.0001 41.0003 47.0001 41.0003 C47.0001 41.0003 42 41.0003 42 41.0003 Z M24.494 40.9593 C24.1234 41.0113 23.106 41.0226 22.7958 40.9913 C20.4939 40.7306 19.0582 39.5802 18.2302 38.2706 C17.1353 36.5386 17.049 34.6316 17.049 34.6316 C17.049 34.6316 17.049 23.6833 17.049 22.9858 C17.049 22.2849 17.2816 20.6571 17.2816 20.6571 C18.2643 17.3648 20.9905 16.4809 22.4971 16.1986 C23.1197 16.0806 23.9327 16.0806 24.5326 16.1913 C26.0262 16.4606 28.7784 17.4033 29.771 20.7056 C29.771 20.7056 29.9982 22.3207 29.9982 23.0161 C29.9982 23.7084 29.9982 34.5676 29.9982 34.5676 C29.9982 34.5676 29.9384 36.5386 28.8436 38.2706 C28.045 39.5397 26.6697 40.6612 24.494 40.9593 Z M26 23.0006 C26 23.0006 25.8468 20.0106 23.5398 20.0106 C23.5398 20.0106 21 19.7629 21 23.0006 C21 26.2355 21 31.2282 21 34.0005 C21 36.7752 23.5398 37.1099 23.5398 37.1099 C23.5398 37.1099 26 36.7752 26 34.0005 C26 31.2282 26 23.0006 26 23.0006 Z M11 41.0003 C11 41.0003 6.00006 41.0003 6.00006 41.0003 C6.00006 41.0003 6.00006 27.0004 6.00006 27.0004 C6.00006 27.0004 6.759e-005 7.99439 6.759e-005 7.99439 C6.759e-005 7.99439 5.19067 7.99439 5.19067 7.99439 C5.19067 7.99439 8.72804 20.8642 8.72804 20.8642 C8.72804 20.8642 12.2656 7.99439 12.2656 7.99439 C12.2656 7.99439 17.2191 7.99439 17.2191 7.99439 C17.2191 7.99439 11 27.0004 11 27.0004 C11 27.0004 11 41.0003 11 41.0003 Z"
+                                  fill="rgb(0,0,0)"/>
+                            <path fill-rule="evenodd"
+                                  d=" M68 -3.26363e-008 C68.8868 -3.26363e-008 76.0244 0.000682484 88.9684 0.000682484 C110.685 0.0717282 113.53 -0.160444 118.843 0.389311 C127.01 1.78321 125.48 15.0265 125.938 25.0001 C125.696 36.7463 125.721 42.6408 123.711 45.3649 C123.131 46.2382 121.347 48.3378 119.32 48.8323 C114.699 49.7705 101.174 50.0003 88.7057 50.0003 C79.5704 50.0003 65.709 49.7778 60.3834 49.3104 C49.997 48.3725 51.4575 35.792 50.9993 25.0001 C50.9993 20.0199 50.9137 13.1367 51.8396 8.0415 C53.9206 -0.999779 59.676 0.469452 68 -3.26363e-008 Z"
+                                  fill="rgb(251,33,47)"/>
+                            <path fill-rule="evenodd"
+                                  d=" M112 30.0004 C112 30.0004 112 33.604 112 34.9999 C112 36.378 113.013 37.1353 114.867 37.1353 C116.721 37.1353 117 34.9999 117 34.9999 C117 34.9999 117 32.0006 117 32.0006 C117 32.0006 121 32.0006 121 32.0006 C121 32.0006 121.346 33.6236 120.887 36.6459 C120.199 40.817 115.102 41.3064 115.102 41.3064 C107.705 41.3064 107.945 34.3609 107.945 34.3609 C107.945 34.3609 107.945 23.7039 107.945 22.7767 C107.945 21.8474 108.391 20.4604 108.391 20.4604 C108.868 19.0734 110.107 16.2914 114.857 16.2894 C120.791 16.2866 121.101 22.7767 121.101 22.7767 C121.101 22.7767 121 30.0004 121 30.0004 C121 30.0004 112 30.0004 112 30.0004 Z M117 22.0001 C117 22.0001 116.491 20.1117 114.637 20.1117 C112.784 20.1117 112 21.54 112 22.0001 C112 22.4682 112 26.0003 112 26.0003 C112 26.0003 117 26.0003 117 26.0003 C117 26.0003 117 22.0001 117 22.0001 Z M100.953 41.187 C98.1821 41.187 96.8674 39.1486 96 38.0003 C96 38.0003 96 41.0003 96 41.0003 C96 41.0003 91.0001 41.0003 91.0001 41.0003 C91.0001 41.0003 91.0001 8.00023 91.0001 8.00023 C91.0001 8.00023 96 8.00023 96 8.00023 C96 8.00023 96 18.0004 96 18.0004 C96 18.0004 97.9528 15.9403 100.036 15.9403 C102.119 15.9403 104 16.9868 104 20.0002 C104 23.014 104 37.0002 104 37.0002 C104 37.0002 103.725 41.187 100.953 41.187 Z M100 23.0006 C100 21.3828 99.1588 20.1117 98.0118 20.1117 C96.8463 20.1117 95.9455 21.0396 95.9455 21.0396 C95.9455 21.0396 96 36.0004 96 36.0004 C96.5783 36.9204 98.0118 37.0167 98.0118 37.0167 C99.8656 37.0167 100 34.9999 100 34.9999 C100 34.9999 100 24.6163 100 23.0006 Z M81.9452 38.1643 C81.9452 38.1643 79.6326 41.187 77.0909 41.187 C74.5489 41.187 73.0001 40.0043 73.0001 37.0002 C73.0001 33.9778 73.0001 16.0005 73.0001 16.0005 C73.0001 16.0005 78 16.0005 78 16.0005 C78 16.0005 78.0084 36.0963 78.0084 36.0963 C78.0084 36.0963 78.0084 37.0167 79.174 37.0167 C80.321 37.0167 81.9452 35.3903 81.9452 34.9308 C81.9452 34.4713 82 16.0005 82 16.0005 C82 16.0005 87.0001 16.0005 87.0001 16.0005 C87.0001 16.0005 87.0001 41.0003 87.0001 41.0003 C87.0001 41.0003 81.9452 40.9576 81.9452 40.9576 C81.9452 40.9576 81.9452 38.1643 81.9452 38.1643 Z M67.0001 41.0003 C67.0001 41.0003 62 41.0003 62 41.0003 C62 41.0003 62 13.0005 62 13.0005 C62 13.0005 57.0001 13.0005 57.0001 13.0005 C57.0001 13.0005 57.0001 8.00023 57.0001 8.00023 C57.0001 8.00023 72 8.00023 72 8.00023 C72 8.00023 72 13.0005 72 13.0005 C72 13.0005 67.0001 13.0005 67.0001 13.0005 C67.0001 13.0005 67.0001 41.0003 67.0001 41.0003 Z"
+                                  fill="rgb(255,255,255)"/>
+                        </svg>
+                    </div>
+                    <a class="home-youtube__link" target="_blank" href="https://www.youtube.com/user/hcskatv"></a>
+                    <div class="home-youtube__button">
+                        <div class="g-ytsubscribe" data-channel="hcskatv" data-layout="default"
+                             data-count="default"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-social__half m-fb-vk">
+                <div class="home-social__column">
+                    <div id="vk_groups"></div>
+                </div>
+                <div class="home-social__column">
+                    <div class="fb-like-box" data-href="https://www.facebook.com/hcSKA" data-width="260"
+                         data-height="260" data-colorscheme="light" data-show-faces="true" data-header="true"
+                         data-stream="false" data-show-border="false"></div>
+                </div>
+            </div>
+        </div>
+        <div class="home-social__wrp home-social__banners">
+            <div class="wrp-banner"><!--AdFox START--><!--opaFg45Rtnb8--><!--Площадка: ska.ru / * / *-->
+                <!--Тип баннера: 560х130 левый верхний--><!--Расположение: <низ страницы>-->
+                <script type="text/javascript"><!--
+                if (typeof(pr) == 'undefined') {
+                    var pr = Math.floor(Math.random() * 4294967295) + 1;
+                }
+                if (typeof(document.referrer) != 'undefined') {
+                    if (typeof(afReferrer) == 'undefined') {
+                        afReferrer = escape(document.referrer);
+                    }
+                } else {
+                    afReferrer = '';
+                }
+                var addate = new Date();
+                document.write('<scr' + 'ipt type="text/javascript" src="//ads.adfox.ru/241409/prepareCode?pp=i&amp;ps=ccss&amp;p2=ffjt&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr + '&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '"><\/scr' + 'ipt>');
+                // --></script><!--AdFox END--></div>
+            <div class="wrp-banner"><!--AdFox START--><!--opaFg45Rtnb8--><!--Площадка: ska.ru / * / *-->
+                <!--Тип баннера: 560х130 правый верхний--><!--Расположение: <низ страницы>-->
+                <script type="text/javascript"><!--
+                if (typeof(pr) == 'undefined') {
+                    var pr = Math.floor(Math.random() * 4294967295) + 1;
+                }
+                if (typeof(document.referrer) != 'undefined') {
+                    if (typeof(afReferrer) == 'undefined') {
+                        afReferrer = escape(document.referrer);
+                    }
+                } else {
+                    afReferrer = '';
+                }
+                var addate = new Date();
+                document.write('<scr' + 'ipt type="text/javascript" src="//ads.adfox.ru/241409/prepareCode?pp=i&amp;ps=ccss&amp;p2=ffkf&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr + '&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '"><\/scr' + 'ipt>');
+                // --></script><!--AdFox END--></div>
+            <div class="wrp-banner"><!--AdFox START--><!--opaFg45Rtnb8--><!--Площадка: ska.ru / * / *-->
+                <!--Тип баннера: 560х130 левый нижний--><!--Расположение: <низ страницы>-->
+                <script type="text/javascript"><!--
+                if (typeof(pr) == 'undefined') {
+                    var pr = Math.floor(Math.random() * 4294967295) + 1;
+                }
+                if (typeof(document.referrer) != 'undefined') {
+                    if (typeof(afReferrer) == 'undefined') {
+                        afReferrer = escape(document.referrer);
+                    }
+                } else {
+                    afReferrer = '';
+                }
+                var addate = new Date();
+                document.write('<scr' + 'ipt type="text/javascript" src="//ads.adfox.ru/241409/prepareCode?pp=i&amp;ps=ccss&amp;p2=ffkg&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr + '&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '"><\/scr' + 'ipt>');
+                // --></script><!--AdFox END--></div>
+            <div class="wrp-banner"><!--AdFox START--><!--opaFg45Rtnb8--><!--Площадка: ska.ru / * / *-->
+                <!--Тип баннера: 560х130 правый нижний--><!--Расположение: <низ страницы>-->
+                <script type="text/javascript"><!--
+                if (typeof(pr) == 'undefined') {
+                    var pr = Math.floor(Math.random() * 4294967295) + 1;
+                }
+                if (typeof(document.referrer) != 'undefined') {
+                    if (typeof(afReferrer) == 'undefined') {
+                        afReferrer = escape(document.referrer);
+                    }
+                } else {
+                    afReferrer = '';
+                }
+                var addate = new Date();
+                document.write('<scr' + 'ipt type="text/javascript" src="//ads.adfox.ru/241409/prepareCode?pp=i&amp;ps=ccss&amp;p2=ffkh&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr + '&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '"><\/scr' + 'ipt>');
+                // --></script><!--AdFox END--></div>
+        </div>
+    </div>
+</div>
+<footer class="page-footer">
+    <div class="full-nav footer-nav-default">
+        <div class="wrp">
+            <nav class="full-nav__table">
+                <ul class="full-nav__list">
+                    <li class="full-nav__item"><a href="/" class="full-nav__link full-nav__link_strong">
+                        Главная
+                    </a></li>
+                    <li class="full-nav__item"><a href="/news/" class="full-nav__link full-nav__link_strong">
+                        Новости
+                    </a></li>
+                    <li class="full-nav__item"><a href="/team/" class="full-nav__link full-nav__link_strong">
+                        Команда
+                    </a></li>
+                    <li class="full-nav__item"><a href="/advertisers" class="full-nav__link ">
+                        Рекламодателям
+                    </a></li>
+                    <li class="full-nav__item"><a href="/journalists" class="full-nav__link ">
+                        Журналистам
+                    </a></li>
+                </ul>
+                <ul class="full-nav__list">
+                    <li class="full-nav__item"><a href="/club/history" class="full-nav__link full-nav__link_strong">
+                        Клуб
+                    </a></li>
+                    <li class="full-nav__item"><a href="/club/management" class="full-nav__link ">
+                        Руководство
+                    </a></li>
+                    <li class="full-nav__item"><a href="/club/coaches" class="full-nav__link ">
+                        Тренеры
+                    </a></li>
+                    <li class="full-nav__item"><a href="/club/assist" class="full-nav__link ">
+                        Персонал
+                    </a></li>
+                    <li class="full-nav__item"><a href="/club/history" class="full-nav__link ">
+                        история клуба
+                    </a></li>
+                    <li class="full-nav__item"><a href="/club/contacts" class="full-nav__link ">
+                        Контакты
+                    </a></li>
+                </ul>
+                <ul class="full-nav__list">
+                    <li class="full-nav__item"><a href="https://tickets.ska.ru/"
+                                                  class="full-nav__link full-nav__link_strong">
+                        Билеты
+                    </a></li>
+                </ul>
+                <ul class="full-nav__list">
+                    <li class="full-nav__item"><a href="/media/" class="full-nav__link full-nav__link_strong">
+                        Медиа
+                    </a></li>
+                    <li class="full-nav__item"><a href="/media/album" class="full-nav__link ">
+                        фотографии
+                    </a></li>
+                    <li class="full-nav__item"><a href="/media/skatv" class="full-nav__link ">
+                        СКА ТВ
+                    </a></li>
+                    <li class="full-nav__item"><a href="/media/wallpaper" class="full-nav__link ">
+                        обои
+                    </a></li>
+                    <li class="full-nav__item"><a href="/media/skastar" class="full-nav__link ">
+                        «звезда ска»
+                    </a></li>
+                    <li class="full-nav__item"><a href="/media/music" class="full-nav__link ">
+                        музыка ска
+                    </a></li>
+                    <li class="full-nav__item"><a href="/media/app" class="full-nav__link ">
+                        приложение
+                    </a></li>
+                    <li class="full-nav__item"><a href="/media/instagram" class="full-nav__link ">
+                        Instagram
+                    </a></li>
+                </ul>
+                <ul class="full-nav__list">
+                    <li class="full-nav__item"><a href="/fansector/" class="full-nav__link full-nav__link_strong">
+                        Болельщики
+                    </a></li>
+                    <li class="full-nav__item"><a href="/fansector/joinup" class="full-nav__link ">
+                        Cтань частью клуба
+                    </a></li>
+                    <li class="full-nav__item"><a href="/fansector/privilege" class="full-nav__link ">
+                        привилегии
+                    </a></li>
+                    <li class="full-nav__item"><a href="/fansector/horse_fire" class="full-nav__link ">
+                        конь-огонь
+                    </a></li>
+                </ul>
+                <ul class="full-nav__list">
+                    <li class="full-nav__item"><a href="http://www.shop.ska.ru/" target="_blank"
+                                                  class="full-nav__link full-nav__link_strong">
+                        Магазин
+                    </a></li>
+                    <li class="full-nav__item"><a href="http://sisters.ska.ru/" target="_blank"
+                                                  class="full-nav__link full-nav__link_strong">
+                        ska sisters
+                    </a></li>
+                    <li class="full-nav__item"><a href="http://kids.ska.ru/" target="_blank"
+                                                  class="full-nav__link full-nav__link_strong">
+                        ska kids
+                    </a></li>
+                    <li class="full-nav__item"><a href="http://1946.ska.ru/"
+                                                  class="full-nav__link full-nav__link_strong">
+                        СКА-1946
+                    </a></li>
+                    <li class="full-nav__item"><a href="http://www.neva.ska.ru/" target="_blank"
+                                                  class="full-nav__link full-nav__link_strong">
+                        СКА-Нева
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="full-nav footer-nav-mobile">
+        <div class="wrp mobile-nav">
+            <div class="mobile-nav__menu">
+                <div class="mobile-nav__menu-item mobile-nav__menu-item-link"><a href="/" title="Главная">Главная</a>
+                </div>
+                <div class="mobile-nav__menu-item mobile-nav__menu-item-link"><a href="/news/"
+                                                                                 title="Новости">Новости</a></div>
+                <div class="mobile-nav__menu-item mobile-nav__menu-item-dropdown">
+                    <div class="mobile-nav__butter-menu"><span class="butter-menu__line"></span><span
+                            class="butter-menu__line"></span><span class="butter-menu__line"></span></div>
+                </div>
+            </div>
+            <div class="mobile-nav__list">
+                <div class="mobile-nav__item">
+                    <div class="mobile-nav__item-title"><a href="/team/" title="Команда">Команда</a></div>
+                    <ul class="mobile-nav__item-list"></ul>
+                </div>
+                <div class="mobile-nav__item">
+                    <div class="mobile-nav__item-title"><a href="/club/history" title="Клуб">Клуб</a>
+                        <button class="mobile-nav__item-explain">
+                            <svg class="icon_arrow-down">
+                                <use xlink:href="/frontend/img/svg/icons.svg#icon_arrow-down"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="mobile-nav__item-list">
+                        <li class="mobile-nav__item-list-single "><a href="/club/management" title="Руководство">
+                            Руководство
+                        </a></li>
+                        <li class="mobile-nav__item-list-single "><a href="/club/coaches" title="Тренеры">
+                            Тренеры
+                        </a></li>
+                        <li class="mobile-nav__item-list-single "><a href="/club/assist" title="Персонал">
+                            Персонал
+                        </a></li>
+                        <li class="mobile-nav__item-list-single "><a href="/club/coaches" title="история клуба">
+                            история клуба
+                        </a></li>
+                        <li class="mobile-nav__item-list-single "><a href="/club/history" title="Тренеры">
+                            Тренеры
+                        </a></li>
+                        <li class="mobile-nav__item-list-single "><a href="/club/contacts" title="Контакты">
+                            Контакты
+                        </a></li>
+                        <li class="mobile-nav__item-list-single "><a href="/advertisers" title="Рекламодателям">
+                            Рекламодателям
+                        </a></li>
+                        <li class="mobile-nav__item-list-single "><a href="/journalists" title="Журналистам">
+                            Журналистам
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="mobile-nav__item">
+                    <div class="mobile-nav__item-title"><a href="https://tickets.ska.ru/" title="Билеты">Билеты</a>
+                    </div>
+                    <ul class="mobile-nav__item-list"></ul>
+                </div>
+                <div class="mobile-nav__item">
+                    <div class="mobile-nav__item-title"><a href="/media/" title="Медиа">Медиа</a>
+                        <button class="mobile-nav__item-explain">
+                            <svg class="icon_arrow-down">
+                                <use xlink:href="/frontend/img/svg/icons.svg#icon_arrow-down"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="mobile-nav__item-list">
+                        <li class="mobile-nav__item-list-single "><a href="/media/album" title="фотографии">
+                            фотографии
+                        </a></li>
+                        <li class="mobile-nav__item-list-single "><a href="/media/skatv" title="СКА ТВ">
+                            СКА ТВ
+                        </a></li>
+                        <li class="mobile-nav__item-list-single "><a href="/media/wallpaper" title="обои">
+                            обои
+                        </a></li>
+                        <li class="mobile-nav__item-list-single hidden"><a href="/media/skastar" title="«звезда ска»">
+                            «звезда ска»
+                        </a></li>
+                        <li class="mobile-nav__item-list-single hidden"><a href="/media/music" title="музыка ска">
+                            музыка ска
+                        </a></li>
+                        <li class="mobile-nav__item-list-single "><a href="/media/app" title="приложение">
+                            приложение
+                        </a></li>
+                        <li class="mobile-nav__item-list-single hidden"><a href="/media/instagram" title="Instagram">
+                            Instagram
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="partners">
+        <div class="wrp">
+            Партнеры Чемпионата КХЛ сезона 2015/16
+        </div>
+        <div class="wrp">
+            <ul class="partners__list">
+                <li class="partners__item">
+                    <div class="partners__item-box"><a href="http://www.sogaz.ru/" target="_blank"
+                                                       class="partners__link" title="СОГАЗ"><img
+                            src="/frontend/img/tmp/partners/26.png" alt="СОГАЗ"></a></div>
+                    <div class="partners__item-label">Генеральный<br/>партнер</div>
+                </li>
+                &#x20;
+                <li class="partners__item">
+                    <div class="partners__item-box"><a href="http://www.mastercard.ru/" target="_blank"
+                                                       class="partners__link" title="Mastercard"><img
+                            src="/frontend/img/tmp/partners/32.png" alt="Mastercard"></a></div>
+                    <div class="partners__item-label">Официальный<br/>партнер</div>
+                </li>
+                &#x20;
+                <li class="partners__item">
+                    <div class="partners__item-box"><a href="http://www.rt.ru/" target="_blank" class="partners__link"
+                                                       title="Ростелеком"><img src="/frontend/img/tmp/partners/34.png"
+                                                                               alt="Ростелеком"></a></div>
+                    <div class="partners__item-label">Партнер</div>
+                </li>
+                &#x20;
+                <li class="partners__item">
+                    <div class="partners__item-box"><a href="http://www.eriell.com/ru/" target="_blank"
+                                                       class="partners__link" title="Eriell"><img
+                            src="/frontend/img/tmp/partners/29.png" alt="Eriell"></a></div>
+                    <div class="partners__item-label">Партнер</div>
+                </li>
+                &#x20;
+                <li class="partners__item">
+                    <div class="partners__item-box"><a href="http://www.coca-cola.ru/" target="_blank"
+                                                       class="partners__link" title="Coca-Cola"><img
+                            src="/frontend/img/tmp/partners/28.png" alt="Coca-Cola"></a></div>
+                    <div class="partners__item-label">Партнер</div>
+                </li>
+                &#x20;
+                <li class="partners__item">
+                    <div class="partners__item-box"><a href="http://moscow.megafon.ru/" target="_blank"
+                                                       class="partners__link" title="Мегафон"><img
+                            src="/frontend/img/tmp/partners/33.png" alt="Мегафон"></a></div>
+                    <div class="partners__item-label">Поставщик</div>
+                </li>
+                &#x20;
+                <li class="partners__item">
+                    <div class="partners__item-box"><a href="http://www.haier.com/ru/" target="_blank"
+                                                       class="partners__link" title="Haier"><img
+                            src="/frontend/img/tmp/partners/31.png" alt="Haier"></a></div>
+                    <div class="partners__item-label">Поставщик</div>
+                </li>
+                &#x20;
+                <li class="partners__item">
+                    <div class="partners__item-box"><a href="http://www.gesrv.ru/" target="_blank"
+                                                       class="partners__link" title="ГАЗЭНЕРГОСЕРВИС"><img
+                            src="/frontend/img/tmp/partners/30.png" alt="ГАЗЭНЕРГОСЕРВИС"></a></div>
+                    <div class="partners__item-label">Поставщик</div>
+                </li>
+                &#x20;
+                <li class="partners__item">
+                    <div class="partners__item-box"><a href="http://www.championat.com/" target="_blank"
+                                                       class="partners__link" title="Чемпионат"><img
+                            src="/frontend/img/tmp/partners/27.png" alt="Чемпионат"></a></div>
+                    <div class="partners__item-label">Интернет-партнер</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+<div class="hidden">
+    <div class="js-lightbox__container registration__container">
+        <form id="profile" class="registration__form" novalidate="true">
+            <div class="registration__close js-close">
+                <svg class="icon_close">
+                    <use xlink:href="/frontend/img/svg/icons.svg#icon_close"></use>
+                </svg>
+            </div>
+            <div class="registration__form-header"><h3>Профиль</h3>
+                <div class="registration__social_block"><span class="registration__social_text">
+                            Привязать аккаунт соц.сети
+                        </span><span class="registration__social_container"><span
+                        class="registration__social_item"><span onclick="sAuth.auth('vk', 'connect')"
+                                                                class="social-links__link registration__social_link"><svg
+                        class="registration__icon icon_social-vk">
+                    <use xlink:href="/frontend/img/svg/icons.svg#icon_social-vk"></use>
+                </svg></span></span><span class="registration__social_item"><span onclick="sAuth.auth('fb', 'connect')"
+                                                                                  class="social-links__link registration__social_link"><svg
+                        class="registration__icon icon_social-fb">
+                    <use xlink:href="/frontend/img/svg/icons.svg#icon_social-fb"></use>
+                </svg></span></span></span></div>
+            </div>
+            <div class="registration__form-body"><label class="registration__row registration__row_required"><span
+                    class="registration__label">Фамилия</span><span class="registration__input-holder"><input
+                    class="registration__text-input" type="text" name="last_name" autocomplete="off" required
+                    placeholder="Иванов"></span><span
+                    class="error__span">Это поле обязательно для заполнения</span></label><label
+                    class="registration__row registration__row_required"><span
+                    class="registration__label">Имя</span><span class="registration__input-holder"><input
+                    class="registration__text-input" type="text" name="first_name" autocomplete="off" required
+                    placeholder="Иван"></span><span
+                    class="error__span">Это поле обязательно для заполнения</span></label><label
+                    class="registration__row registration__row_required"><span class="registration__label">E-mail</span><span
+                    class="registration__input-holder"><input class="registration__text-input" disabled type="email"
+                                                              name="email" autocomplete="off" required
+                                                              placeholder="email@email.com"></span><span
+                    class="error__span">Не правильный формат email</span></label><label
+                    class="registration__row registration__row_required"><span
+                    class="registration__label">Телефон</span><span class="registration__input-holder"><input
+                    class="registration__text-input" type="tel" disabled name="telephone" autocomplete="off" required
+                    placeholder="7 (000) 000-00-00"></span><span
+                    class="error__span">Не правильный формат ввода телефона</span></label><label
+                    class="registration__row registration__row_required"><span class="registration__label">Пароль</span><span
+                    class="registration__input-holder"><input class="registration__text-input" type="password"
+                                                              name="password" autocomplete="off"
+                                                              placeholder="Минимум 6 знаков"></span><span
+                    class="error__span">Пароль должен быть не менее 6 символов</span></label><label
+                    class="registration__row registration__row_required"><span
+                    class="registration__label registration__label_min">Повторите пароль</span><span
+                    class="registration__input-holder"><input class="registration__text-input" type="password"
+                                                              name="confirm_password" autocomplete="off" placeholder=""></span><span
+                    class="error__span">Пароли не совпадают</span></label>
+                <div class="registration__row registration__row_required">
+                    <div class="registration__input-holder registration__input-holder_wide"><label
+                            class="registration__checkbox registration__row_required"><span
+                            class="custom-checkbox"><input class="custom-checkbox__input" type="checkbox"
+                                                           name="agree_sms"><svg
+                            class="custom-checkbox__check icon_check">
+                        <use xlink:href="/frontend/img/svg/icons.svg#icon_check"></use>
+                    </svg></span><span class="registration__checkbox-label">Подписаться на новости по sms</span></label>
+                    </div>
+                    <div class="registration__input-holder registration__input-holder_wide"><label
+                            class="registration__checkbox registration__row_required"><span
+                            class="custom-checkbox"><input class="custom-checkbox__input" type="checkbox"
+                                                           name="agree_email"><svg
+                            class="custom-checkbox__check icon_check">
+                        <use xlink:href="/frontend/img/svg/icons.svg#icon_check"></use>
+                    </svg></span><span
+                            class="registration__checkbox-label">Подписаться на новости по email</span></label></div>
+                    <label class="registration__row registration__row_failed"><span class="registration__label">Ошибка при редактировании профиля. Введенные данные некорректны</span></label>
+                </div>
+            </div>
+            <div class="registration__form-bottom">
+                <div class="registration__form-bottom_text">
+                    <div id="resend-econfirm" class="registration__input-holder registration__input-holder_wide"><label
+                            class="registration__checkbox registration__row_required"><span
+                            class="custom-checkbox"><input class="custom-checkbox__input" type="checkbox"
+                                                           name="resend-econfirm"><svg
+                            class="custom-checkbox__check icon_check">
+                        <use xlink:href="/frontend/img/svg/icons.svg#icon_check"></use>
+                    </svg></span><span
+                            class="registration__checkbox-label">Выслать подверждение на e-mail повторно</span></label>
+                    </div>
+                </div>
+                <span class="registration__form-bottom_button"><button
+                        class="registration__submit ska-button ska-button_blue submit-profiledit">Готово
+                </button></span></div>
+        </form>
+    </div>
+    <div class="js-lightbox__container login__container">
+        <form id="login" class="registration__form" novalidate="true">
+            <div class="registration__close js-close">
+                <svg class="icon_close">
+                    <use xlink:href="/frontend/img/svg/icons.svg#icon_close"></use>
+                </svg>
+            </div>
+            <div class="registration__form-header"><h3>Авторизация</h3>
+                <div class="registration__social_block"><span class="registration__social_text">
+                    Войти через социальные сети
+                </span><span class="registration__social_container"><span class="registration__social_item"><span
+                        onclick="sAuth.auth('vk', 'auth')" class="social-links__link registration__social_link"><svg
+                        class="registration__icon icon_social-vk">
+                    <use xlink:href="/frontend/img/svg/icons.svg#icon_social-vk"></use>
+                </svg></span></span><span class="registration__social_item"><span onclick="sAuth.auth('fb', 'auth')"
+                                                                                  class="social-links__link registration__social_link"><svg
+                        class="registration__icon icon_social-fb">
+                    <use xlink:href="/frontend/img/svg/icons.svg#icon_social-fb"></use>
+                </svg></span></span></span></div>
+            </div>
+            <div class="registration__form-body"><label class="registration__row registration__row_required"><span
+                    class="registration__label">E-mail</span><span class="registration__input-holder"><input
+                    class="registration__text-input" type="email" name="email" required
+                    placeholder="email@email.com"></span><span
+                    class="error__span">Неправильный формат email</span></label><label
+                    class="registration__row registration__row_required"><span class="registration__label">Пароль</span><span
+                    class="registration__input-holder"><input class="registration__text-input" type="password"
+                                                              name="password" required placeholder=""></span><span
+                    class="error__span">Пароль должен быть не менее 6 символов</span></label><label
+                    class="registration__row registration__row_failed"><span class="registration__label">Ошибка авторизации. Неправильный логин или пароль.</span></label>
+            </div>
+            <div class="registration__form-bottom">
+                <div class="registration__form-bottom_text"><span
+                        class="registration__link js-forgot">Забыли пароль</span><span
+                        class="registration__link js-registration">Зарегистрироваться</span></div>
+                <span class="registration__form-bottom_button"><button
+                        class="registration__submit ska-button ska-button_blue submit-signin">Войти
+                </button></span></div>
+        </form>
+    </div>
+    <div class="js-lightbox__container registration__container">
+        <form id="registration" class="registration__form" novalidate="true">
+            <div class="registration__close js-close">
+                <svg class="icon_close">
+                    <use xlink:href="/frontend/img/svg/icons.svg#icon_close"></use>
+                </svg>
+            </div>
+            <div class="registration__form-header"><h3>Регистрация</h3>
+                <div class="registration__social_block"><span class="registration__social_text">
+                            Зарегистрироваться через социальные сети
+                        </span><span class="registration__social_container"><span
+                        class="registration__social_item"><span onclick="sAuth.auth('vk', 'register')"
+                                                                class="social-links__link registration__social_link"><svg
+                        class="registration__icon icon_social-vk">
+                    <use xlink:href="/frontend/img/svg/icons.svg#icon_social-vk"></use>
+                </svg></span></span><span class="registration__social_item"><span onclick="sAuth.auth('fb', 'register')"
+                                                                                  class="social-links__link registration__social_link"><svg
+                        class="registration__icon icon_social-fb">
+                    <use xlink:href="/frontend/img/svg/icons.svg#icon_social-fb"></use>
+                </svg></span></span></span></div>
+            </div>
+            <div class="registration__form-body"><label class="registration__row registration__row_required"><span
+                    class="registration__label">Фамилия</span><span class="registration__input-holder"><input
+                    class="registration__text-input" type="text" name="last_name" autocomplete="off" required
+                    placeholder="Иванов"></span><span
+                    class="error__span">Это поле обязательно для заполнения</span><span
+                    class="error__span error__span-server">Поле содержит недопустимые символы</span></label><label
+                    class="registration__row registration__row_required"><span
+                    class="registration__label">Имя</span><span class="registration__input-holder"><input
+                    class="registration__text-input" type="text" name="first_name" autocomplete="off" required
+                    placeholder="Иван"></span><span class="error__span">Это поле обязательно для заполнения</span><span
+                    class="error__span error__span-server">Поле содержит недопустимые символы</span></label><label
+                    class="registration__row registration__row_required"><span class="registration__label">E-mail</span><span
+                    class="registration__input-holder"><input class="registration__text-input" type="email" name="email"
+                                                              autocomplete="off" required placeholder="email@email.com"></span><span
+                    class="error__span">Неправильный формат email</span><span class="error__span error__span-server">Этот email уже используется</span></label><label
+                    class="registration__row registration__row_required"><span
+                    class="registration__label">Телефон</span><span class="registration__input-holder"><input
+                    class="registration__text-input" type="tel" name="telephone" autocomplete="off" required
+                    placeholder="7 (000) 000-00-00"></span><span
+                    class="error__span">Неверный формат. Минимум 10 цифр</span><span
+                    class="error__span error__span-server">Этот телефон уже используется</span></label><label
+                    class="registration__row registration__row_required"><span class="registration__label">Пароль</span><span
+                    class="registration__input-holder"><input class="registration__text-input" type="password"
+                                                              name="password" autocomplete="off" required
+                                                              placeholder="Минимум 6 знаков"></span><span
+                    class="error__span">Пароль должен быть не менее 6 символов</span></label><label
+                    class="registration__row registration__row_required"><span
+                    class="registration__label registration__label_min">Повторите пароль</span><span
+                    class="registration__input-holder"><input class="registration__text-input" type="password"
+                                                              name="confirm_password" autocomplete="off" required
+                                                              placeholder="Минимум 6 знаков"></span><span
+                    class="error__span">Пароли не совпадают</span></label><label
+                    class="registration__row registration__row_required"><span class="registration__label"><img
+                    class="registration__captcha" src="/api/captcha"/></span><span class="registration__input-holder"
+                                                                                   style="margin-top: 33px;"><input
+                    class="registration__text-input" type="text" name="captcha" autocomplete="off" required
+                    placeholder="Введите код безопасности"></span><span class="error__span" style="margin-top: 33px;">Неправильный код</span><span
+                    class="error__span error__span-server" style="margin-top: 33px;">Неправильный код</span></label>
+                <div class="registration__row registration__row_required">
+                    <div class="registration__input-holder registration__input-holder_wide"><label
+                            class="registration__checkbox registration__row_required"><span
+                            class="custom-checkbox"><input class="custom-checkbox__input" type="checkbox" name="agree"
+                                                           checked><svg class="custom-checkbox__check icon_check">
+                        <use xlink:href="/frontend/img/svg/icons.svg#icon_check"></use>
+                    </svg></span><span class="registration__checkbox-label">Я согласен на хранение и использование моих персональных данных</span></label>
+                    </div>
+                    <div class="registration__input-holder registration__input-holder_wide"><label
+                            class="registration__checkbox registration__row_required"><span
+                            class="custom-checkbox"><input class="custom-checkbox__input" type="checkbox"
+                                                           name="agree_email" checked><svg
+                            class="custom-checkbox__check icon_check">
+                        <use xlink:href="/frontend/img/svg/icons.svg#icon_check"></use>
+                    </svg></span><span
+                            class="registration__checkbox-label">Я согласен получать новости ХК СКА на e-mail</span></label>
+                    </div>
+                    <div class="registration__input-holder registration__input-holder_wide"><label
+                            class="registration__checkbox registration__row_required"><span
+                            class="custom-checkbox"><input class="custom-checkbox__input" type="checkbox"
+                                                           name="agree_sms"><svg
+                            class="custom-checkbox__check icon_check">
+                        <use xlink:href="/frontend/img/svg/icons.svg#icon_check"></use>
+                    </svg></span><span
+                            class="registration__checkbox-label">Я согласен получать новости ХК СКА по смс</span></label>
+                    </div>
+                </div>
+                <label class="registration__row registration__row_failed"><span class="registration__label">Ошибка регистрации. Введенные данные некорректны</span></label>
+            </div>
+            <div class="registration__form-bottom">
+                <div class="registration__form-bottom_text">
+                    Уже есть логин на «СКА»?
+                    <span class="registration__link js-login">Войти</span></div>
+                <span class="registration__form-bottom_button"><button
+                        class="registration__submit ska-button ska-button_blue submit-signup">Готово
+                </button></span></div>
+        </form>
+    </div>
+    <div class="js-lightbox__container login__container">
+        <form id="forgot-pass" class="registration__form" novalidate="true">
+            <div class="registration__close js-close">
+                <svg class="icon_close">
+                    <use xlink:href="/frontend/img/svg/icons.svg#icon_close"></use>
+                </svg>
+            </div>
+            <div class="registration__form-header registration__form-header_no-border"><h3>Забыли пароль</h3></div>
+            <div class="registration__form-body"><label class="registration__row registration__row_required"><span
+                    class="registration__label">E-mail</span><span class="registration__input-holder"><input
+                    class="registration__text-input" type="email" name="email" autocomplete="off" required
+                    placeholder="email@email.com"></span><span
+                    class="error__span">Не правильный формат email</span></label><label
+                    class="registration__row registration__row_required"><span class="registration__label"><img
+                    class="registration__captcha" src="/api/captcha"/></span><span class="registration__input-holder"
+                                                                                   style="margin-top: 33px;"><input
+                    class="registration__text-input" type="text" name="captcha" autocomplete="off" required
+                    placeholder="Введите код безопасности"></span><span class="error__span" style="margin-top: 33px;">Не правильный код</span></label><label
+                    class="registration__row registration__row_failed"><span class="registration__label">Ошибка. Введенные данные некорректны</span></label>
+            </div>
+            <div class="registration__form-bottom">
+                <div class="registration__form-bottom_text"><span class="registration__link js-login">Кажется вспомнил(а)</span>
+                </div>
+                <span class="registration__form-bottom_button"><button
+                        class="registration__submit ska-button ska-button_blue submit-forgot">Готово
+                </button></span></div>
+        </form>
+    </div>
+    <div class="preloader">
+        <div class="preloader__animation"></div>
+    </div>
+    <div id="contentCalculator" class="loaded-holder"></div>
+    <div id="GlobalAppEventBus" class="wrp"></div>
+</div>
+<script>
+    WBDictionary = window.WBDictionary || {};
+    WBDictionary.main = {
+        bannersUrl: '/block/banners',
+        socialUrl: '/share_count',
+        lightboxUrl: '/media/photobox',
+        tag: 'null',
+        filterAlbum: 'false',
+        tagUrl: '/media/tag',
+        searchUrl: '/search/',
+        baseUrl: '/',
+        userPhoto: '/frontend/img/tmp/user_small.jpg',
+        imagePath: '/frontend/img/',
+        loginBox: {
+            login: '/api/authorize',                //вход в систему
+            checkUser: '/api/user/check',           //проверка куки юзера
+            registration: '/api/user/register',     //Регистрация
+            confirmEmail: '/api/user/confirm_email', //Подтверждение почты
+            editUserInfo: '/api/user/edit',         //Редактирование информации о пользователе
+            infoUser: '/api/user/info',             //Получение информации о пользователе
+            changePass: '/api/user/change_request', //Запрос письма восстановления пароля
+            checkToken: '/api/user/change_token',   //Проверка токена смены пароля
+            resendEmail: '/api/user/change_request', //Повторная отправка письма подтверждения меила
+            doChangePass: '/api/user/change_password'
+
+        },
+        searchCategory: [
+            {
+                "category_id": -1,
+                "category_name": ""
+            },
+            {
+                "category_id": 0,
+                "category_name": "игрок"
+            },
+            {
+                "category_id": 1,
+                "category_name": "матч"
+            },
+            {
+                "category_id": 2,
+                "category_name": "новость"
+            },
+            {
+                "category_id": 3,
+                "category_name": "альбомы"
+            },
+            {
+                "category_id": 4,
+                "category_name": "видео"
+            },
+            {
+                "category_id": 5,
+                "category_name": "статистика"
+            },
+            {
+                "category_id": 6,
+                "category_name": "руководство"
+            },
+            {
+                "category_id": 7,
+                "category_name": "тренеры"
+            },
+            {
+                "category_id": 8,
+                "category_name": "персонал"
+            },
+            {
+                "category_id": 9,
+                "category_name": "история клуба"
+            },
+            {
+                "category_id": 10,
+                "category_name": "контактная информация"
+            },
+            {
+                "category_id": 11,
+                "category_name": "статичные страницы"
+            }
+        ]
+    };
+    WBDictionary.main.svgIcons = WBDictionary.main.imagePath + 'svg/icons.svg';
+    WBDictionary.social = {
+        fb: '662787003806314'
+    };
+    WBDictionary.defaultDatepickerParams = {
+        defaultDate: 0,
+        prevText: '<svg class="icon_arrow-left"><use xlink:href="' + WBDictionary.main.svgIcons + '#icon_arrow-left" /></svg>',
+        nextText: '<svg class="icon_arrow-right"><use xlink:href="' + WBDictionary.main.svgIcons + '#icon_arrow-right" /></svg>'
+    };
+</script>
+<script src="/frontend/js/vendor/jquery.cookie.js"></script>
+<script src="/frontend/js/vendor/runtime.js"></script>
+<script src="/frontend/js/plugins.js?v=1459147954649"></script>
+<script src="/frontend/js/templates.js?v=1459147954649"></script>
+<script src="/frontend/js/main.min.js?v=1459147954649"></script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-19620142-1', 'ska.ru');
+    ga('send', 'pageview');
+</script><!-- End Google Analytics --><!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter4831450 = new Ya.Metrika({
+                    id: 4831450,
+                    webvisor: true,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    trackHash: true
+                });
+            } catch (e) {
+            }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>
+    <div><img src="//mc.yandex.ru/watch/4831450" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
+<script type="text/javascript">
+    var owatagCid = 4379;
+    (function () {
+        function d() {
+            b.qo33OrmjMAEReady = 1
+        }
+
+        var a = document, b = window;
+        b.addEventListener ? b.addEventListener("load", d, false) : b.attachEvent ? b.attachEvent("onload", d) : d();
+        var c = a.createElement("script");
+        c.type = "text/javascript";
+        c.async = true;
+        c.src = "http" + ("https:" == a.location.protocol ? "s" : "") + "://ssl.hurra.com/owatag.js";
+        a = a.getElementsByTagName("script")[0];
+        a.parentNode.insertBefore(c, a)
+    })();
+</script>
+<script>
+    $(document).ready(function () {
+        $('.banner-block').parent().css('width', '1200px');
+    });
+</script>
+</body>
+</html>

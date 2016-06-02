@@ -1,0 +1,252 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <script>
+        $(document).ready(function () {
+            getTeams();
+        });
+        function getTeams() {
+            $.ajax({
+                url: "{% url 'team:get_teams' online.id %}",
+                type: "GET",
+                success: function (resp) {
+                    addTeamsToSelect(resp);
+                }
+            })
+        }
+        function addTeamsToSelect(teams) {
+            var parents = [];
+            parents[0] = $("#id_team");
+            parents[1] = $("#goal_scorer_team");
+            parents.forEach(function (parent, l, m) {
+                parent.append("<option value='' selected='selected'>---------</option>");
+                teams.forEach(function (item, i, arr) {
+                    parent.append("<option value=" + item.pk + ">" + item.fields.name + "</option>")
+                });
+            });
+        }
+        function changePenaltyTeam() {
+            var val = document.getElementById('id_team').value;
+            getPenaltyPlayers(val)
+        }
+        function changeGoalTeam() {
+            var val = document.getElementById('goal_scorer_team').value;
+            getGoalPlayers(val)
+        }
+        function getPenaltyPlayers(val) {
+            var lin;
+            if (val == {{ online.match.home.id }}) {
+                lin = "{% url 'team:get_players' online.match.home.id %}";
+            }
+            else {
+                lin = "{% url 'team:get_players' online.match.guest.id %}";
+            }
+            $.ajax({
+                url: lin,
+                type: "GET",
+                success: function (resp) {
+                    addPlayersToPenaltySelect(resp);
+                }
+            })
+        }
+        function getGoalPlayers(val) {
+            var lin;
+            if (val == {{ online.match.home.id }}) {
+                lin = "{% url 'team:get_players' online.match.home.id %}";
+            }
+            else {
+                lin = "{% url 'team:get_players' online.match.guest.id %}";
+            }
+            $.ajax({
+                url: lin,
+                type: "GET",
+                success: function (resp) {
+                    addPlayersToGoalSelect(resp);
+                }
+            })
+        }
+        function addPlayersToPenaltySelect(players) {
+            var parent = $("#id_player");
+            var ch = document.getElementById('pl');
+            while (ch !== undefined && ch !== null) {
+                ch.remove();
+                ch = document.getElementById('pl')
+            }
+            parent.append("<option value='' selected='selected'>---------</option>");
+            players.forEach(function (item, i, arr) {
+                parent.append("<option id='pl' value=" + item.pk + ">" + item.fields.number + " " +
+                        item.fields.last_name + " " + item.fields.first_name + "</option>")
+            });
+        }
+        function addPlayersToGoalSelect(players) {
+            var parents = [];
+            parents[0] = $("#goal_scorer");
+            parents[1] = $("#assistant1");
+            parents[2] = $("#assistant2");
+            var ch = document.getElementById('pl');
+            while (ch !== undefined && ch !== null) {
+                ch.remove();
+                ch = document.getElementById('pl')
+            }
+            parents.forEach(function (parent, j, a) {
+                parent.append("<option value='' selected='selected'>---------</option>");
+                players.forEach(function (item, i, arr) {
+                    parent.append("<option id='pl' value=" + item.pk + ">" + item.fields.number + " " +
+                            item.fields.last_name + " " + item.fields.first_name + "</option>")
+                });
+            });
+        }
+
+        var firstCall = true;
+        var lastEvent;
+        var allEvents;
+
+        function addEventToPage(events) {
+            var parent = $("#broadcasting");
+            if (firstCall) {
+                events.forEach(function (event, i, arr) {
+                    parent.append("<p>" + event.fields.event_time + "| " + event.fields.text + "</p>");
+                    console.log(event);
+                });
+                if (events.length === 0) {
+                    lastEvent = 's';
+                }
+                else {
+                    lastEvent = events[events.length - 1];
+                }
+                firstCall = false;
+            }
+            else {
+                if (lastEvent !== undefined) {
+                    var newEvent = events[events.length - 1];
+                    if (lastEvent.pk !== newEvent.pk || lastEvent === 's') {
+                        lastEvent = newEvent;
+                        parent.append("")
+                    }
+                }
+                else {
+                    console.log("fail");
+                }
+            }
+        }
+        function changeScore(match){
+            var home_score = document.getElementById("home_score");
+            var guest_score = document.getElementById("guest_score");
+            console.log(match);
+            if (match.home_score !== home_score){
+                home_score.innerHTML = match.home_score
+            }
+            if (match.guest_score !== guest_score){
+                guest_score.innerHTML = match.guest_score
+            }
+        }
+        $(document).ready(function () {
+            var si = setInterval(function () {
+                $.ajax({
+                    url: "{% url 'team:get_events' online.id %}",
+                    type: "GET",
+                    success: function (resp) {
+                        addEventToPage(resp);
+                    }
+                })
+            }, 1000);
+            var qw = setInterval(function () {
+                $.ajax({
+                    url: "{% url 'team:get_score' online.id %}",
+                    type: "GET",
+                    success: function (resp) {
+                        console.log(resp);
+                        changeScore(resp);
+                    }
+                })
+            }, 1000);
+        });
+    </script>
+    <div id="container" class="container">
+        <h2>Online broadcasting</h2>
+        <div id="score" align="center">
+            <div class="row">
+                <h3 class="col-sm-4">{{ online.match.home.name }}</h3> <h3 class="col-sm-1" id="home_score"></h3>
+                <h3 class="col-sm-1"> : </h3><h3 class="col-sm-1" id="guest_score"></h3>
+                <h3 class="col-sm-4">{{ online.match.guest.name }}</h3></div>
+        </div>
+        <div id="broadcasting"></div>
+        {% if user.is_superuser %}
+            <h2>Form</h2>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#event">Event</a></li>
+                <li><a data-toggle="tab" href="#penalty">Penalty</a></li>
+                <li><a data-toggle="tab" href="#goal">Goal</a></li>
+                <li><a data-toggle="tab" href="#match_end">Match end</a></li>
+            </ul>
+            <div class="tab-content">
+            <div id="event" class="tab-pane fade in active">
+                <h3>Event</h3>
+                <form method="post">{% csrf_token %}
+                    {{ event_form.as_p }}
+                    <input type="submit" value="Save">
+                </form>
+            </div>
+            <div id="penalty" class="tab-pane fade">
+                <h3>Penalty</h3>
+                <form method="post">{% csrf_token %}
+                    <p>
+                        <label for="id_team">Team:</label>
+                        <select id="id_team" name="team" onchange="changePenaltyTeam()"></select>
+                    </p>
+                    <p>
+                        <label for="id_player">Player:</label>
+                        <select id="id_player" name="player"></select>
+                    </p>
+                    <p>
+                        <label for="penalty">Penalty:</label>
+                        {{ penalty_form.penalty }}
+                    </p>
+                    <p>
+                        <label for="penalty_minutes">Penalty minutes:</label>
+                        {{ penalty_form.penalty_minutes }}
+                    </p>
+                    <p>
+                        <label for="penalty_time">Penalty time:</label>
+                        {{ penalty_form.penalty_time }}
+                    </p>
+                    <input type="submit" value="Save">
+                </form>
+            </div>
+            <div id="goal" class="tab-pane fade">
+                <h3>Goal</h3>
+                <form method="post">{% csrf_token %}
+                    <p>
+                        <label for="goal_scorer_team">Goal scorer team:</label>
+                        <select id="goal_scorer_team" name="goal_scorer_team" onchange="changeGoalTeam()"></select>
+                    </p>
+                    <p>
+                        <label for="goal_time">Goal time:</label>
+                        {{ goal_form.goal_time }}
+                    </p>
+                    <p>
+                        <label for="goal_scorer">Goal scorer:</label>
+                        <select id="goal_scorer" name="goal_scorer"></select>
+                    </p>
+                    <p>
+                        <label for="assistant1">Assistant 1:</label>
+                        <select id="assistant1" name="assist1"></select>
+                    </p>
+                    <p>
+                        <label for="assistant2">Assistant 2:</label>
+                        <select id="assistant2" name="assist2"></select>
+                    </p>
+                    <input type="submit" value="Save">
+                </form>
+            </div>
+            <div id="match_end" class="tab-pane fade">
+                <h3>Match end</h3>
+                <form method="post">{% csrf_token %}
+                    {{ match_end_form.as_p }}
+                    <input type="submit" value="Save">
+                </form>
+            </div>
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}

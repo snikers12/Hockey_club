@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="container" class="container">
+        <h2>Schedule</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Date</th>
+                <th>Home</th>
+                <th>Guest</th>
+                <th>Score</th>
+                <th>Online</th>
+            </tr>
+            {% for m in matchs %}
+                <tr>
+                    <th>{{ m.date }}</th>
+                    <th>{{ m.home }}</th>
+                    <th>{{ m.guest }}</th>
+                    <th>{{ m.home_score }}:{{ m.guest_score }} {% if m.ot == "OT" %} OT {% elif m.ot == "SO" %} SO {% endif %}</th>
+                    <th><a href="{% url 'team:online' m.id %}">Online</a></th>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

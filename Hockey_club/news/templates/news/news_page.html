@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div id="container" class="container">
+        <div class="page-header">
+            <h1>{{ news.title }}</h1>
+        </div>
+        <img src="{{ news.image.url }}" class="img-thumbnail">
+        <p>{{ news.text }}</p>
+        <p><i>{{ news.publication_date }}</i></p>
+        <br>
+        <h3>Comments:</h3>
+        <div id="comments">
+        </div>
+        <script src="{% static "js/http_cdnjs.cloudflare.com_ajax_libs_jquery-cookie_1.4.1_jquery.cookie.js" %}"></script>
+        <script>
+            var firstCall = true;
+            var lastComment;
+            var allComments;
+
+            function addCommentToPage(comments) {
+                var parent = $("#comments");
+                if (firstCall) {
+                    comments.forEach(function (comment, i, arr) {
+                        parent.append("<div class='row'><div class='col-sm-1'>" +
+                                "<div class='thumbnail'>" +
+                                "<img class='img-responsive user-photo' src=" + comment.fields.author[1] + ">" +
+                                "</div></div><div class='col-sm-5'><div class='panel panel-default'><div class='panel-heading'>" +
+                                "<strong>" + comment.fields.author[0] + "</strong> <span class='text-muted'>" +
+                                new Date(comment.fields.publication_date).toLocaleString() + "</span></div><div class='panel-body'>" +
+                                comment.fields.comment + "</div>" + "</div></div></div>");
+                    });
+                    if (comments.length === 0){
+                        lastComment = 's';
+                    }
+                    else {
+                        lastComment = comments[comments.length - 1];
+                    }
+                    firstCall = false;
+                }
+                else {
+                    if (lastComment !== undefined) {
+                        var newComment = comments[comments.length - 1];
+                        if (lastComment.pk !== newComment.pk || lastComment === 's') {
+                            lastComment = newComment;
+                            parent.append("<div class='row'><div class='col-sm-1'>" +
+                                    "<div class='thumbnail'>" +
+                                    "<img class='img-responsive user-photo' src=" + lastComment.fields.author[1] + ">" +
+                                    "</div></div><div class='col-sm-5'><div class='panel panel-default'><div class='panel-heading'>" +
+                                    "<strong>" + lastComment.fields.author[0] + "</strong> <span class='text-muted'>" +
+                                    new Date(lastComment.fields.publication_date).toLocaleString() + "</span></div><div class='panel-body'>" +
+                                    lastComment.fields.comment + "</div>" + "</div></div></div>")
+                        }
+                    }
+                    else {
+                        console.log("fail");
+                    }
+                }
+            }
+            $(document).ready(function () {
+                var si = setInterval(function () {
+                    $.ajax({
+                        url: "{% url 'news:get_comments' news.id %}",
+                        type: "GET",
+                        success: function (resp) {
+                            addCommentToPage(resp);
+                        }
+                    })
+                }, 1000);
+
+                var ac = $('#add_comment').click(function () {
+                    $.ajax({
+                        url: "{% url 'news:add_comment' news.id %}",
+                        type: "POST",
+                        data: {
+                            'csrfmiddlewaretoken': $.cookie().csrftoken,
+                            'comment': $('#comment').val()
+                        },
+                        success: function (data) {
+                            addCommentToPage(data)
+                        }
+                    });
+                });
+            });
+        </script>
+        <hr/>
+        {% if user.is_authenticated %}
+            <div class="row">
+                <div class="col-sm-1">
+                    <div class="thumbnail">
+                        <img class="img-responsive user-photo" src="{{ user.userprofile.image.url }}">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>{{ user.username }}</strong>
+                        </div>
+                        <div class="panel-body">
+                            <div class="status-upload">
+                                <textarea id="comment" placeholder="Write your comment here" cols="58"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id="add_comment" class="btn btn-success green">
+                    <i class="fa fa-reply"></i>Post
+                </button>
+            </div>
+        {% else %}
+            <h4>If you want to comment this news you should <a href="{% url 'users:login' %}">authorise</a> or
+                <a href="{% url 'users:registration' %}">register</a> if you haven't account yet</h4>
+        {% endif %}
+    </div>
+{% endblock %}

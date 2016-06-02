@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="container" class="container">
+        <form action="{% url "users:login" %}{{ next }}" method="POST">
+            {% csrf_token %}
+            <p>
+                <label>
+                    <input type="text" name="username" placeholder="username">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="password" name="password" placeholder="password">
+                </label>
+            </p>
+            <p><input type="submit" value="Login"></p>
+        </form>
+    <p>If you haven't account yet, you can <a href="{% url "users:registration" %}">register</a></p>
+    </div>
+{% endblock %}

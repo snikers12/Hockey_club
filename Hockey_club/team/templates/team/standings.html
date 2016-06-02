@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="container" class="container">
+        <h1>Standings</h1>
+        <table class="table table-striped">
+            <tr>
+                <th>Team</th>
+                <th>GP</th>
+                <th>W</th>
+                <th>L</th>
+                <th>OT</th>
+                <th>GF</th>
+                <th>GA</th>
+                <th>P</th>
+            </tr>
+            {% for t in stats %}
+                <tr>
+                    <th>{{ t.team.name }}</th>
+                    <th>{{ t.games_played }}</th>
+                    <th>{{ t.wins }}</th>
+                    <th>{{ t.loses }}</th>
+                    <th>{{ t.ot }}</th>
+                    <th>{{ t.goals_for }}</th>
+                    <th>{{ t.goals_against }}</th>
+                    <th>{{ t.points }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

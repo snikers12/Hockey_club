@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div id="container" class="container">
+    <h2>{{ album.album_name }}</h2>
+        {% for photo in photos %}
+            <img src="{{ photo.image.url }}">
+        {% endfor %}
+    </div>
+{% endblock %}

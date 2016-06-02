@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="container" class="container">
+        <h1>Stats</h1>
+        <h2>Goaltenders</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>#</th>
+                <th>Player</th>
+                <th>Position</th>
+                <th>GP</th>
+                <th>W</th>
+                <th>GA</th>
+                <th>"0"</th>
+            </tr>
+            {% for p in goaltenders %}
+                <tr>
+                    <th>{{ p.player.number }}</th>
+                    <th>{{ p.player.first_name }} {{ p.player.last_name }}</th>
+                    <th>{{ p.player.position }}</th>
+                    <th>{{ p.games_played }}</th>
+                    <th>{{ p.wins }}</th>
+                    <th>{{ p.goals_against }}</th>
+                    <th>{{ p.null }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+        <hr/>
+        <h2>Defencemans</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>#</th>
+                <th>Player</th>
+                <th>Position</th>
+                <th>GP</th>
+                <th>G</th>
+                <th>A</th>
+                <th>P</th>
+                <th>PIM</th>
+            </tr>
+            {% for p in defencemans %}
+                <tr>
+                    <th>{{ p.player.number }}</th>
+                    <th>{{ p.player.first_name }} {{ p.player.last_name }}</th>
+                    <th>{{ p.player.position }}</th>
+                    <th>{{ p.games_played }}</th>
+                    <th>{{ p.goals }}</th>
+                    <th>{{ p.assists }}</th>
+                    <th>{{ p.points }}</th>
+                    <th>{{ p.penalty_minutes }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+        <hr/>
+        <h2>Forwards</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>#</th>
+                <th>Player</th>
+                <th>Position</th>
+                <th>GP</th>
+                <th>G</th>
+                <th>A</th>
+                <th>P</th>
+                <th>PIM</th>
+            </tr>
+            {% for p in forwards %}
+                <tr>
+                    <th>{{ p.player.number }}</th>
+                    <th>{{ p.player.first_name }} {{ p.player.last_name }}</th>
+                    <th>{{ p.player.position }}</th>
+                    <th>{{ p.games_played }}</th>
+                    <th>{{ p.goals }}</th>
+                    <th>{{ p.assists }}</th>
+                    <th>{{ p.points }}</th>
+                    <th>{{ p.penalty_minutes }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

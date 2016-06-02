@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="container" class="container">
+        <h2>Stuff</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+            </tr>
+            {% for p in stuff %}
+                <tr>
+                    <th>{{ p.first_name }} {{ p.last_name }}</th>
+                    <th>{{ p.position }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+        <hr/>
+        <h2>Players</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>#</th>
+                <th>Player</th>
+                <th>Position</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>Birth day</th>
+            </tr>
+            {% for p in players %}
+                <tr>
+                    <th>{{ p.number }}</th>
+                    <th>{{ p.first_name }} {{ p.last_name }}</th>
+                    <th>{{ p.position }}</th>
+                    <th>{{ p.weight }}</th>
+                    <th>{{ p.height }}</th>
+                    <th>{{ p.birthday }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
