@@ -15,7 +15,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -114,16 +114,16 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = (os.path.join(BASE_DIR, "media"))
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 TIME_INPUT_FORMATS = (
         '%M:%S',
 )
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# STATIC_ROOT = os.path.join(PROJECT_ROOT, '../staticfiles')
-#
-# STATICFILES_DIRS = (
-#     os.path.join(PROJECT_ROOT, '../static'),
-# )
+STATIC_ROOT = os.path.join(PROJECT_ROOT, '../staticfiles')
+
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, '../static'),
+)
