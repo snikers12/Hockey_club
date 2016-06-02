@@ -77,11 +77,15 @@ WSGI_APPLICATION = 'Hockey_club.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
+# postgres://oecpxjykbeoiby:_qpZq-nKHTIS4QzhJko6yJ7FZw@ec2-54-247-185-241.eu-west-1.compute.amazonaws.com:5432/da6rlc2jgqkemg
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'da6rlc2jgqkemg',
+        'USER': 'oecpxjykbeoiby',
+        'PASSWORD': '_qpZq-nKHTIS4QzhJko6yJ7FZw',
+        'HOST': 'ec2-54-247-185-241.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
