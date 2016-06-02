@@ -72,15 +72,14 @@ def news(request):
         news_post = paginator.page(1)
     except EmptyPage:
         news_post = paginator.page(paginator.num_pages)
-    latest_news = news_list[0:6]
-    other_news = news_list[6:12]
+    latest_news = news_list[:6]
+    other_news = news_list[6:]
     legend = stat_legend
     vars = dict(
         news=news_post,
         latest_news=latest_news,
         last_news=latest_news[0],
         other_news=other_news,
-        separate_after=other_news[2],
         legend=legend
     )
     return render(request, 'news/news_list_pagination.html', vars)
