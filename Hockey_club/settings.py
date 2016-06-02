@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'team',
     'gallery',
     'news',
-    'users'
+    'users',
+    'whitenoise',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -53,6 +54,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 )
 
 ROOT_URLCONF = 'Hockey_club.urls'
