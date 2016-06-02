@@ -120,7 +120,7 @@ TIME_INPUT_FORMATS = (
         '%M:%S',
 )
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, '../staticfiles')
 
